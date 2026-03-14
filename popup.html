@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SingulEYE</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div class="hero-top">
+          <div class="hero-brand">
+            <div class="hero-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="hero-label">SingulEYE</span>
+          </div>
+          <span class="hero-version">v1.0</span>
+        </div>
+        <h1 class="hero-title">탭 차단 설정</h1>
+        <div class="status-chip">
+          <span class="status-dot"></span>
+          <span id="statusLine">현재 페이지 정보를 불러오는 중입니다...</span>
+        </div>
+        <div class="stat-bar">
+          <div class="stat-item">
+            <span class="stat-label">숨김</span>
+            <strong class="stat-value" id="hiddenCountValue">-</strong>
+          </div>
+          <span class="stat-divider"></span>
+          <div class="stat-item">
+            <span class="stat-label">차단</span>
+            <strong class="stat-value" id="blockedHeadCountValue">-</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel fade-in" style="animation-delay:.06s">
+        <div class="section-heading">
+          <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>작성자 필터</h2>
+            <p>유동 IP 글과 댓글을 각각 바로 제어합니다</p>
+          </div>
+        </div>
+
+        <label class="setting-row" for="floatingIpToggle">
+          <div class="copy-block">
+            <strong>유동 IP 글 보기</strong>
+            <span>OFF로 바꾸면 목록에서 바로 숨겨집니다</span>
+          </div>
+          <input class="toggle-input" id="floatingIpToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+
+        <label class="setting-row" for="floatingIpCommentToggle">
+          <div class="copy-block">
+            <strong>유동 IP 댓글 보기</strong>
+            <span>OFF로 바꾸면 본문 댓글에서 바로 숨겨집니다</span>
+          </div>
+          <input class="toggle-input" id="floatingIpCommentToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+      </section>
+
+      <section class="panel fade-in" style="animation-delay:.12s">
+        <div class="section-heading">
+          <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div>
+            <h2>탭 차단</h2>
+            <p>ON으로 바꾸면 해당 탭의 글이 목록에서 즉시 숨겨집니다</p>
+          </div>
+        </div>
+
+        <div class="action-grid">
+          <button class="action-button action-button--primary" id="blockAllButton" type="button">전체 ON</button>
+          <button class="action-button" id="unblockAllButton" type="button">전체 OFF</button>
+          <button class="action-button" id="resetHeadsButton" type="button">기본값 복원</button>
+        </div>
+
+        <div class="head-list" id="headList"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <strong>탭 목록을 찾지 못했습니다</strong>
+          <span>특이점이 온다 갤러리 목록 페이지를 열면 자동으로 불러옵니다</span>
+        </div>
+      </section>
+
+      <footer class="app-footer fade-in" style="animation-delay:.18s">
+        DCInside 특이점이 온다 갤러리 전용
+      </footer>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

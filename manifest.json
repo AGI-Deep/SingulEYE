@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "SingulEYE",
+  "description": "Control tab blocking and floating-IP visibility on thesingularity gallery pages.",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_title": "SingulEYE",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gall.dcinside.com/mgallery/board/lists*",
+        "https://gall.dcinside.com/mgallery/board/view*"
+      ],
+      "js": [
+        "shared.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
