@@ -14,286 +14,335 @@
   ============================================
   아래 div 전체를 DC인사이드 글쓰기 HTML 모드에
   그대로 복사 붙여넣기 하면 됩니다.
+
+  DC 호환: table 레이아웃, 단색 배경, 기본 CSS만 사용
+  (flex, gradient, border-radius, box-shadow, position 미사용)
   ============================================
 -->
 
-<div style="max-width:680px; margin:0 auto; font-family:-apple-system,'Malgun Gothic','맑은 고딕',sans-serif; color:#191f28; line-height:1.7; font-size:15px;">
+<div style="max-width:680px; margin:0 auto; font-family:'Malgun Gothic','맑은 고딕',sans-serif; color:#333; line-height:1.7; font-size:15px;">
 
 <!-- ===== 헤더 ===== -->
-<div style="text-align:center; padding:40px 20px 30px; background:linear-gradient(135deg,#3182f6 0%,#6366f1 50%,#ec4899 100%); border-radius:20px; margin-bottom:32px; box-shadow:0 8px 32px rgba(49,130,246,0.3);">
-  <div style="display:inline-block; width:80px; height:80px; border-radius:20px; background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); line-height:80px; margin-bottom:16px;">
-    <span style="font-size:42px;">👁️</span>
-  </div>
-  <h1 style="margin:0 0 8px; font-size:32px; font-weight:900; color:#fff; letter-spacing:-0.03em;">SingulEYE (특안)</h1>
-  <p style="margin:0 0 4px; font-size:15px; color:rgba(255,255,255,0.9); font-weight:600;">특이점이 온다 갤러리 전용 크롬 확장 프로그램</p>
-  <p style="margin:0; font-size:13px; color:rgba(255,255,255,0.7);">v1.0 · 무료 · 오픈소스</p>
-</div>
-
-<!-- ===== 헤더 스크린샷 ===== -->
-<div style="text-align:center; margin-bottom:24px;">
-  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/header.png" alt="SingulEYE 헤더" style="max-width:400px; width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.12);">
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#3b5998; margin-bottom:24px;">
+<tr>
+<td style="text-align:center; padding:36px 20px 28px;">
+  <span style="font-size:48px;">👁️</span><br>
+  <span style="font-size:28px; font-weight:900; color:#fff; letter-spacing:-0.03em;">SingulEYE (특안)</span><br>
+  <span style="font-size:14px; color:#ccc;">특이점이 온다 갤러리 전용 크롬 확장 프로그램</span><br>
+  <span style="font-size:12px; color:#999;">v1.0 · 무료 · 오픈소스</span>
+</td>
+</tr>
+</table>
 
 <!-- ===== 한줄 소개 ===== -->
-<div style="text-align:center; padding:20px; margin-bottom:28px;">
-  <p style="font-size:18px; font-weight:700; color:#191f28; margin:0 0 8px;">🛡️ 깨끗한 갤러리 환경을 위한 올인원 필터</p>
-  <p style="font-size:14px; color:#8b95a1; margin:0;">유동 IP · ㅇㅇ 고닉 · 도배 스팸 · 말머리 차단을 한방에</p>
-</div>
+<p style="text-align:center; font-size:17px; font-weight:700; color:#333; margin:0 0 4px;">🛡️ 깨끗한 갤러리 환경을 위한 올인원 필터</p>
+<p style="text-align:center; font-size:13px; color:#888; margin:0 0 24px;">유동 IP · ㅇㅇ 고닉 · 도배 스팸 · 말머리 차단을 한방에</p>
 
 <!-- ===== 다운로드 버튼 ===== -->
-<div style="text-align:center; margin-bottom:36px;">
-  <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="display:inline-block; padding:14px 36px; background:linear-gradient(135deg,#3182f6,#6366f1); color:#fff; font-size:16px; font-weight:800; text-decoration:none; border-radius:14px; box-shadow:0 4px 16px rgba(49,130,246,0.4); letter-spacing:-0.01em;">⬇️ 지금 다운로드 (GitHub)</a>
-  <p style="margin:10px 0 0; font-size:12px; color:#8b95a1;">ZIP 다운로드 → 압축 해제 → 크롬에 로드</p>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr>
+<td style="text-align:center; padding:8px;">
+  <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="display:inline-block; padding:12px 32px; background-color:#3b82f6; color:#fff; font-size:15px; font-weight:800; text-decoration:none;">⬇️ 지금 다운로드 (GitHub)</a><br>
+  <span style="font-size:11px; color:#999;">ZIP 다운로드 → 압축 해제 → 크롬에 로드</span>
+</td>
+</tr>
+</table>
 
 <!-- ===== 구분선 ===== -->
-<hr style="border:none; height:1px; background:linear-gradient(90deg,transparent,#d1d6db,transparent); margin:32px 0;">
+<hr style="border:none; height:1px; background-color:#ddd; margin:28px 0;">
 
 <!-- ===== 왜 만들었는가 ===== -->
-<h2 style="text-align:center; font-size:20px; font-weight:900; margin-bottom:24px; color:#191f28;">📝 왜 만들었는가</h2>
+<p style="text-align:center; font-size:19px; font-weight:900; color:#333; margin:0 0 16px;">📝 왜 만들었는가</p>
 
-<div style="background:linear-gradient(135deg,#f8fafc,#f1f5f9); border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06);">
-  <p style="margin:0; font-size:14px; color:#4e5968; line-height:2;">
-    역류기 때문에 매일 고생하는 완장분들, 파딱분들,<br>
-    그리고 도배·분탕에 섞인 불필요한 글과 댓글을 억지로 봐야 하는 특붕이들.<br><br>
-    갤러리를 떠나지 않으면서도 <b style="color:#3182f6;">내 눈에 보이는 것만이라도 깨끗하게</b> 만들 수 있으면 좋겠다는 생각에서 출발했습니다.<br><br>
-    완장이 일일이 삭제하지 않아도, 운영 측에 신고하지 않아도,<br>
-    <b>내 브라우저에서 내가 보고 싶은 글만 보는 건 누구에게나 있는 자유</b>니까요.<br><br>
-    애드블럭으로 광고를 끄듯이, SingulEYE로 <b style="color:#3182f6;">편안한 눈(EYE)</b>을 만들어 보세요.
-  </p>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8f9fa; margin-bottom:20px;">
+<tr>
+<td style="padding:24px 20px; font-size:14px; color:#555; line-height:2;">
+  역류기 때문에 매일 고생하는 완장분들, 파딱분들,<br>
+  그리고 도배·분탕에 섞인 불필요한 글과 댓글을 억지로 봐야 하는 특붕이들.<br><br>
+  갤러리를 떠나지 않으면서도 <b style="color:#3b82f6;">내 눈에 보이는 것만이라도 깨끗하게</b> 만들 수 있으면 좋겠다는 생각에서 출발했습니다.<br><br>
+  완장이 일일이 삭제하지 않아도, 운영 측에 신고하지 않아도,<br>
+  <b>내 브라우저에서 내가 보고 싶은 글만 보는 건 누구에게나 있는 자유</b>니까요.<br><br>
+  애드블럭으로 광고를 끄듯이, SingulEYE로 <b style="color:#3b82f6;">편안한 눈(EYE)</b>을 만들어 보세요.
+</td>
+</tr>
+</table>
 
 <!-- ===== 영감 ===== -->
-<div style="background:#fff; border-radius:16px; padding:24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-    <div style="width:40px; height:40px; border-radius:12px; background:#fef3c7; text-align:center; line-height:40px; font-size:20px; flex-shrink:0;">💡</div>
-    <div>
-      <h2 style="margin:0; font-size:18px; font-weight:800; color:#191f28;">영감을 받은 곳</h2>
-      <p style="margin:2px 0 0; font-size:12px; color:#8b95a1;">선배 개발자에게 감사를</p>
-    </div>
-  </div>
-  <p style="margin:0; font-size:13px; color:#4e5968; line-height:1.9;">
-    이전에 <b>"정류기"</b>라는 비슷한 기능의 유저스크립트를 만드신 분이 계셨습니다.<br>
-    (<a href="https://gall.dcinside.com/mgallery/board/view/?id=thesingularity&no=1043209" target="_blank" style="color:#3182f6; font-weight:700; text-decoration:none;">원본 게시글 링크</a>)<br><br>
-    안타깝게도 해당 GitHub 레포가 내려간 상태라<br>
-    남아있는 fork 스크립트 코드를 참고해서 크롬 확장 형태로 새롭게 만들어봤습니다.<br><br>
-    정류기 개발자분께 영감에 대한 감사를 드립니다. 🙏
-  </p>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px; font-size:13px; color:#555; line-height:1.9;">
+  <span style="font-size:18px;">💡</span> <b style="font-size:16px; color:#333;">영감을 받은 곳</b>
+  <span style="font-size:11px; color:#999;"> — 선배 개발자에게 감사를</span><br><br>
+  이전에 <b>"정류기"</b>라는 비슷한 기능의 유저스크립트를 만드신 분이 계셨습니다.<br>
+  (<a href="https://gall.dcinside.com/mgallery/board/view/?id=thesingularity&no=1043209" target="_blank" style="color:#3b82f6; font-weight:700; text-decoration:none;">원본 게시글 링크</a>)<br><br>
+  안타깝게도 해당 GitHub 레포가 내려간 상태라<br>
+  남아있는 fork 스크립트 코드를 참고해서 크롬 확장 형태로 새롭게 만들어봤습니다.<br><br>
+  정류기 개발자분께 영감에 대한 감사를 드립니다. 🙏
+</td>
+</tr>
+</table>
 
 <!-- ===== 구분선 ===== -->
-<hr style="border:none; height:1px; background:linear-gradient(90deg,transparent,#d1d6db,transparent); margin:32px 0;">
+<hr style="border:none; height:1px; background-color:#ddd; margin:28px 0;">
+
+<!-- ===== UI 미리보기 ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0f4ff; margin-bottom:28px;">
+<tr>
+<td style="text-align:center; padding:28px 20px;">
+  <span style="font-size:12px; font-weight:700; color:#6366f1; letter-spacing:0.05em;">UI PREVIEW</span><br>
+  <b style="font-size:18px; color:#333;">✨ 이렇게 생겼어요</b><br><br>
+  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/header.png" alt="SingulEYE 팝업 UI" width="380" style="max-width:100%; border:1px solid #ddd;"><br>
+  <span style="font-size:11px; color:#999;">크롬 툴바에서 아이콘 클릭 → 팝업 UI가 열립니다</span>
+</td>
+</tr>
+</table>
 
 <!-- ===== 기능 1: 작성자 필터 ===== -->
-<div style="text-align:center; margin-bottom:8px;">
-  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-writer.png" alt="작성자 필터 UI" style="max-width:360px; width:100%; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-</div>
-<div style="background:#fff; border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-    <div style="width:40px; height:40px; border-radius:12px; background:#e8f3ff; text-align:center; line-height:40px; font-size:20px; flex-shrink:0;">👤</div>
-    <div>
-      <h2 style="margin:0; font-size:18px; font-weight:800; color:#191f28;">작성자 필터</h2>
-      <p style="margin:2px 0 0; font-size:12px; color:#8b95a1;">원하지 않는 작성자 유형을 골라서 숨기기</p>
-    </div>
-  </div>
-  <table style="width:100%; border-collapse:collapse; font-size:14px;">
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#3182f6; width:40%;">유동 IP 글 보기</td>
-      <td style="padding:12px 8px; color:#4e5968;">OFF로 바꾸면 유동 IP가 쓴 글이 목록에서 사라집니다</td>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px;">
+  <!-- 헤더 -->
+  <span style="font-size:18px;">👤</span> <b style="font-size:16px; color:#333;">작성자 필터</b>
+  <span style="font-size:11px; color:#999;"> — 원하지 않는 작성자 유형을 골라서 숨기기</span><br><br>
+  <!-- 스크린샷 -->
+  <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="text-align:center; padding-bottom:16px;">
+    <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-writer.png" alt="작성자 필터 UI" width="360" style="max-width:100%; border:1px solid #eee;">
+  </td></tr></table>
+  <!-- 설명 테이블 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#3b82f6; width:40%;">유동 IP 글 보기</td>
+      <td style="padding:10px 8px; color:#555;">OFF로 바꾸면 유동 IP가 쓴 글이 목록에서 사라집니다</td>
     </tr>
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#3182f6;">유동 IP 댓글 보기</td>
-      <td style="padding:12px 8px; color:#4e5968;">글 본문의 유동 IP 댓글도 따로 ON/OFF 가능</td>
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#3b82f6;">유동 IP 댓글 보기</td>
+      <td style="padding:10px 8px; color:#555;">글 본문의 유동 IP 댓글도 따로 ON/OFF 가능</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px; font-weight:700; color:#8b5cf6;">ㅇㅇ 고닉 글 보기</td>
-      <td style="padding:12px 8px; color:#4e5968;">닉네임이 'ㅇㅇ'인 반고닉 글만 별도로 숨기기 (유동 IP와 독립)</td>
+      <td style="padding:10px 8px; font-weight:700; color:#7c3aed;">ㅇㅇ 고닉 글 보기</td>
+      <td style="padding:10px 8px; color:#555;">닉네임이 'ㅇㅇ'인 반고닉 글만 별도로 숨기기 (유동 IP와 독립)</td>
     </tr>
   </table>
-</div>
+</td>
+</tr>
+</table>
 
 <!-- ===== 기능 2: 스팸 필터 ===== -->
-<div style="text-align:center; margin-bottom:8px;">
-  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-spam.png" alt="스팸 필터 UI" style="max-width:360px; width:100%; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-</div>
-<div style="background:#fff; border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-    <div style="width:40px; height:40px; border-radius:12px; background:#fef3c7; text-align:center; line-height:40px; font-size:20px; flex-shrink:0;">🛡️</div>
-    <div>
-      <h2 style="margin:0; font-size:18px; font-weight:800; color:#191f28;">스팸 필터</h2>
-      <p style="margin:2px 0 0; font-size:12px; color:#8b95a1;">도배/반복 글을 자동으로 정리</p>
-    </div>
-  </div>
-  <table style="width:100%; border-collapse:collapse; font-size:14px;">
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#ef4444; width:40%;">중복제목 제거</td>
-      <td style="padding:12px 8px; color:#4e5968;">완전히 똑같은 제목이 여러 개면 <b>첫 번째만</b> 남기고 숨김</td>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px;">
+  <!-- 헤더 -->
+  <span style="font-size:18px;">🛡️</span> <b style="font-size:16px; color:#333;">스팸 필터</b>
+  <span style="font-size:11px; color:#999;"> — 도배/반복 글을 자동으로 정리</span><br><br>
+  <!-- 스크린샷 -->
+  <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="text-align:center; padding-bottom:16px;">
+    <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-spam.png" alt="스팸 필터 UI" width="360" style="max-width:100%; border:1px solid #eee;">
+  </td></tr></table>
+  <!-- 설명 테이블 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#ef4444; width:40%;">중복제목 제거</td>
+      <td style="padding:10px 8px; color:#555;">완전히 똑같은 제목이 여러 개면 <b>첫 번째만</b> 남기고 숨김</td>
     </tr>
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#f97316;">유사제목 제거</td>
-      <td style="padding:12px 8px; color:#4e5968;">숫자만 바꿔가며 도배하는 글도 감지 ("테스트1", "테스트2" → 첫 글만 유지)</td>
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#f97316;">유사제목 제거</td>
+      <td style="padding:10px 8px; color:#555;">숫자만 바꿔가며 도배하는 글도 감지 ("테스트1", "테스트2" → 첫 글만 유지)</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px; font-weight:700; color:#22c55e;">공지/설문 보호</td>
-      <td style="padding:12px 8px; color:#4e5968;">공지·설문·운영자 글은 어떤 필터에도 절대 숨기지 않음</td>
+      <td style="padding:10px 8px; font-weight:700; color:#22c55e;">공지/설문 보호</td>
+      <td style="padding:10px 8px; color:#555;">공지·설문·운영자 글은 어떤 필터에도 절대 숨기지 않음</td>
     </tr>
   </table>
-</div>
+</td>
+</tr>
+</table>
 
 <!-- ===== 기능 3: 읽은 글 표시 ===== -->
-<div style="text-align:center; margin-bottom:8px;">
-  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-visited.png" alt="읽은 글 표시 UI" style="max-width:360px; width:100%; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-</div>
-<div style="background:#fff; border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-    <div style="width:40px; height:40px; border-radius:12px; background:#e8f9ee; text-align:center; line-height:40px; font-size:20px; flex-shrink:0;">✅</div>
-    <div>
-      <h2 style="margin:0; font-size:18px; font-weight:800; color:#191f28;">읽은 글 표시</h2>
-      <p style="margin:2px 0 0; font-size:12px; color:#8b95a1;">한번 본 글을 한눈에 구분</p>
-    </div>
-  </div>
-  <table style="width:100%; border-collapse:collapse; font-size:14px;">
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#3182f6; width:40%;"> ✓ 체크 마크</td>
-      <td style="padding:12px 8px; color:#4e5968;">이미 클릭해서 읽은 글 제목 앞에 파란색 ✓ 표시 + 제목 회색 처리</td>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px;">
+  <!-- 헤더 -->
+  <span style="font-size:18px;">✅</span> <b style="font-size:16px; color:#333;">읽은 글 표시</b>
+  <span style="font-size:11px; color:#999;"> — 한번 본 글을 한눈에 구분</span><br><br>
+  <!-- 스크린샷 -->
+  <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="text-align:center; padding-bottom:16px;">
+    <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-visited.png" alt="읽은 글 표시 UI" width="360" style="max-width:100%; border:1px solid #eee;">
+  </td></tr></table>
+  <!-- 설명 테이블 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#3b82f6; width:40%;">✓ 체크 마크</td>
+      <td style="padding:10px 8px; color:#555;">이미 클릭해서 읽은 글 제목 앞에 파란색 ✓ 표시 + 제목 회색 처리</td>
     </tr>
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#3182f6;">최대 5,000건 기록</td>
-      <td style="padding:12px 8px; color:#4e5968;">오래된 기록은 자동으로 정리되어 브라우저 부담 없음</td>
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#3b82f6;">최대 5,000건 기록</td>
+      <td style="padding:10px 8px; color:#555;">오래된 기록은 자동으로 정리되어 브라우저 부담 없음</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px; font-weight:700; color:#3182f6;">기록 초기화</td>
-      <td style="padding:12px 8px; color:#4e5968;">팝업에서 원클릭으로 방문 기록 전체 삭제 가능</td>
+      <td style="padding:10px 8px; font-weight:700; color:#3b82f6;">기록 초기화</td>
+      <td style="padding:10px 8px; color:#555;">팝업에서 원클릭으로 방문 기록 전체 삭제 가능</td>
     </tr>
   </table>
-</div>
+</td>
+</tr>
+</table>
 
 <!-- ===== 기능 4: 말머리 차단 ===== -->
-<div style="text-align:center; margin-bottom:8px;">
-  <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-tabs.png" alt="탭 차단 UI" style="max-width:360px; width:100%; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-</div>
-<div style="background:#fff; border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-    <div style="width:40px; height:40px; border-radius:12px; background:#f3e8ff; text-align:center; line-height:40px; font-size:20px; flex-shrink:0;">🏷️</div>
-    <div>
-      <h2 style="margin:0; font-size:18px; font-weight:800; color:#191f28;">말머리(탭) 차단</h2>
-      <p style="margin:2px 0 0; font-size:12px; color:#8b95a1;">보고 싶지 않은 말머리를 통째로 숨기기</p>
-    </div>
-  </div>
-  <table style="width:100%; border-collapse:collapse; font-size:14px;">
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#8b5cf6; width:40%;">개별 ON/OFF</td>
-      <td style="padding:12px 8px; color:#4e5968;">갤러리의 모든 말머리가 자동으로 로드되어 하나씩 토글 가능</td>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px;">
+  <!-- 헤더 -->
+  <span style="font-size:18px;">🏷️</span> <b style="font-size:16px; color:#333;">말머리(탭) 차단</b>
+  <span style="font-size:11px; color:#999;"> — 보고 싶지 않은 말머리를 통째로 숨기기</span><br><br>
+  <!-- 스크린샷 -->
+  <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="text-align:center; padding-bottom:16px;">
+    <img src="https://raw.githubusercontent.com/AGI-Deep/SingulEYE/main/screenshots/filter-tabs.png" alt="탭 차단 UI" width="360" style="max-width:100%; border:1px solid #eee;">
+  </td></tr></table>
+  <!-- 설명 테이블 -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;">
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#7c3aed; width:40%;">개별 ON/OFF</td>
+      <td style="padding:10px 8px; color:#555;">갤러리의 모든 말머리가 자동으로 로드되어 하나씩 토글 가능</td>
     </tr>
-    <tr style="border-bottom:1px solid #f3f4f6;">
-      <td style="padding:12px 8px; font-weight:700; color:#8b5cf6;">전체 ON / 전체 OFF</td>
-      <td style="padding:12px 8px; color:#4e5968;">버튼 하나로 모든 말머리 일괄 제어</td>
+    <tr style="border-bottom:1px solid #f0f0f0;">
+      <td style="padding:10px 8px; font-weight:700; color:#7c3aed;">전체 ON / 전체 OFF</td>
+      <td style="padding:10px 8px; color:#555;">버튼 하나로 모든 말머리 일괄 제어</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px; font-weight:700; color:#8b5cf6;">기본값 복원</td>
-      <td style="padding:12px 8px; color:#4e5968;">설정 꼬였을 때 초기 상태로 원클릭 복원</td>
+      <td style="padding:10px 8px; font-weight:700; color:#7c3aed;">기본값 복원</td>
+      <td style="padding:10px 8px; color:#555;">설정 꼬였을 때 초기 상태로 원클릭 복원</td>
     </tr>
   </table>
-</div>
+</td>
+</tr>
+</table>
 
 <!-- ===== 구분선 ===== -->
-<hr style="border:none; height:1px; background:linear-gradient(90deg,transparent,#d1d6db,transparent); margin:36px 0;">
+<hr style="border:none; height:1px; background-color:#ddd; margin:28px 0;">
 
 <!-- ===== 핵심 특징 ===== -->
-<h2 style="text-align:center; font-size:20px; font-weight:900; margin-bottom:24px; color:#191f28;">⚡ 왜 SingulEYE인가?</h2>
+<p style="text-align:center; font-size:19px; font-weight:900; color:#333; margin:0 0 16px;">⚡ 왜 SingulEYE인가?</p>
 
-<div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:32px;">
-  <div style="flex:1; min-width:200px; background:linear-gradient(135deg,#eff6ff,#e0f2fe); border-radius:14px; padding:20px; text-align:center;">
-    <div style="font-size:28px; margin-bottom:8px;">🚀</div>
-    <h3 style="margin:0 0 4px; font-size:14px; font-weight:800; color:#191f28;">즉시 적용</h3>
-    <p style="margin:0; font-size:12px; color:#64748b; line-height:1.5;">새로고침 없이 설정 변경 즉시 반영<br>MutationObserver 실시간 감지</p>
-  </div>
-  <div style="flex:1; min-width:200px; background:linear-gradient(135deg,#f5f3ff,#ede9fe); border-radius:14px; padding:20px; text-align:center;">
-    <div style="font-size:28px; margin-bottom:8px;">🔒</div>
-    <h3 style="margin:0 0 4px; font-size:14px; font-weight:800; color:#191f28;">100% 로컬</h3>
-    <p style="margin:0; font-size:12px; color:#64748b; line-height:1.5;">외부 서버 통신 없음<br>개인정보 수집 제로</p>
-  </div>
-  <div style="flex:1; min-width:200px; background:linear-gradient(135deg,#fdf2f8,#fce7f3); border-radius:14px; padding:20px; text-align:center;">
-    <div style="font-size:28px; margin-bottom:8px;">✨</div>
-    <h3 style="margin:0 0 4px; font-size:14px; font-weight:800; color:#191f28;">깔끔한 UI</h3>
-    <p style="margin:0; font-size:12px; color:#64748b; line-height:1.5;">모던 스타일 디자인<br>직관적인 토글 인터페이스</p>
-  </div>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr>
+  <td width="33%" style="text-align:center; padding:16px 8px; background-color:#eff6ff; vertical-align:top;">
+    <span style="font-size:26px;">🚀</span><br>
+    <b style="font-size:13px; color:#333;">즉시 적용</b><br>
+    <span style="font-size:11px; color:#666;">새로고침 없이<br>설정 변경 즉시 반영</span>
+  </td>
+  <td width="33%" style="text-align:center; padding:16px 8px; background-color:#f5f3ff; vertical-align:top;">
+    <span style="font-size:26px;">🔒</span><br>
+    <b style="font-size:13px; color:#333;">100% 로컬</b><br>
+    <span style="font-size:11px; color:#666;">외부 서버 통신 없음<br>개인정보 수집 제로</span>
+  </td>
+  <td width="33%" style="text-align:center; padding:16px 8px; background-color:#fdf2f8; vertical-align:top;">
+    <span style="font-size:26px;">✨</span><br>
+    <b style="font-size:13px; color:#333;">깔끔한 UI</b><br>
+    <span style="font-size:11px; color:#666;">모던 스타일 디자인<br>직관적 토글 인터페이스</span>
+  </td>
+</tr>
+</table>
 
 <!-- ===== 구분선 ===== -->
-<hr style="border:none; height:1px; background:linear-gradient(90deg,transparent,#d1d6db,transparent); margin:36px 0;">
+<hr style="border:none; height:1px; background-color:#ddd; margin:28px 0;">
 
 <!-- ===== 설치 가이드 ===== -->
-<h2 style="text-align:center; font-size:20px; font-weight:900; margin-bottom:24px; color:#191f28;">📦 설치 방법 (1분 컷)</h2>
+<p style="text-align:center; font-size:19px; font-weight:900; color:#333; margin:0 0 16px;">📦 설치 방법 (1분 컷)</p>
 
-<div style="background:#fff; border-radius:16px; padding:28px 24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-  <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:20px;">
-    <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#3182f6,#6366f1); color:#fff; text-align:center; line-height:36px; font-size:16px; font-weight:900; flex-shrink:0;">1</div>
-    <div>
-      <h3 style="margin:0 0 4px; font-size:15px; font-weight:700; color:#191f28;">ZIP 다운로드</h3>
-      <p style="margin:0; font-size:13px; color:#4e5968;">
-        <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="color:#3182f6; font-weight:700; text-decoration:none;">👉 GitHub Releases 페이지</a>에서
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px; font-size:14px; color:#555; line-height:2;">
+
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="36" style="vertical-align:top; padding:4px 12px 16px 0; text-align:center;">
+        <b style="display:inline-block; width:28px; height:28px; background-color:#3b82f6; color:#fff; text-align:center; line-height:28px; font-size:14px; font-weight:900;">1</b>
+      </td>
+      <td style="vertical-align:top; padding-bottom:16px;">
+        <b style="color:#333;">ZIP 다운로드</b><br>
+        <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="color:#3b82f6; font-weight:700; text-decoration:none;">👉 GitHub Releases 페이지</a>에서
         <b>SingulEYE-v1.0.zip</b> 다운로드 후 압축 해제
-      </p>
-    </div>
-  </div>
-  <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:20px;">
-    <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#3182f6,#6366f1); color:#fff; text-align:center; line-height:36px; font-size:16px; font-weight:900; flex-shrink:0;">2</div>
-    <div>
-      <h3 style="margin:0 0 4px; font-size:15px; font-weight:700; color:#191f28;">크롬 확장 관리 페이지</h3>
-      <p style="margin:0; font-size:13px; color:#4e5968;">주소창에 <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:12px; color:#3182f6; font-weight:600;">chrome://extensions</code> 입력 → 우측 상단 <b>개발자 모드 ON</b></p>
-    </div>
-  </div>
-  <div style="display:flex; gap:16px; align-items:flex-start;">
-    <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#3182f6,#6366f1); color:#fff; text-align:center; line-height:36px; font-size:16px; font-weight:900; flex-shrink:0;">3</div>
-    <div>
-      <h3 style="margin:0 0 4px; font-size:15px; font-weight:700; color:#191f28;">확장 로드</h3>
-      <p style="margin:0; font-size:13px; color:#4e5968;"><b>"압축해제된 확장 프로그램을 로드합니다"</b> 클릭 → 압축 해제한 폴더 선택 → 끝!</p>
-    </div>
-  </div>
-</div>
+      </td>
+    </tr>
+    <tr>
+      <td width="36" style="vertical-align:top; padding:4px 12px 16px 0; text-align:center;">
+        <b style="display:inline-block; width:28px; height:28px; background-color:#3b82f6; color:#fff; text-align:center; line-height:28px; font-size:14px; font-weight:900;">2</b>
+      </td>
+      <td style="vertical-align:top; padding-bottom:16px;">
+        <b style="color:#333;">크롬 확장 관리 페이지</b><br>
+        주소창에 <b style="color:#3b82f6;">chrome://extensions</b> 입력 → 우측 상단 <b>개발자 모드 ON</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="36" style="vertical-align:top; padding:4px 12px 0 0; text-align:center;">
+        <b style="display:inline-block; width:28px; height:28px; background-color:#3b82f6; color:#fff; text-align:center; line-height:28px; font-size:14px; font-weight:900;">3</b>
+      </td>
+      <td style="vertical-align:top;">
+        <b style="color:#333;">확장 로드</b><br>
+        <b>"압축해제된 확장 프로그램을 로드합니다"</b> 클릭 → 압축 해제한 폴더 선택 → 끝!
+      </td>
+    </tr>
+  </table>
+
+</td>
+</tr>
+</table>
 
 <!-- ===== 구분선 ===== -->
-<hr style="border:none; height:1px; background:linear-gradient(90deg,transparent,#d1d6db,transparent); margin:36px 0;">
+<hr style="border:none; height:1px; background-color:#ddd; margin:28px 0;">
 
 <!-- ===== FAQ ===== -->
-<h2 style="text-align:center; font-size:20px; font-weight:900; margin-bottom:24px; color:#191f28;">❓ FAQ</h2>
+<p style="text-align:center; font-size:19px; font-weight:900; color:#333; margin:0 0 16px;">❓ FAQ</p>
 
-<div style="background:#fff; border-radius:16px; padding:24px; margin-bottom:16px; border:1px solid rgba(0,0,0,0.06);">
-  <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid #f3f4f6;">
-    <p style="margin:0 0 6px; font-size:14px; font-weight:800; color:#191f28;">Q. 개인정보 수집하나요?</p>
-    <p style="margin:0; font-size:13px; color:#4e5968;">❌ 아니요. 모든 데이터는 브라우저 내부(chrome.storage)에만 저장됩니다. 외부 서버 통신이 전혀 없습니다.</p>
-  </div>
-  <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid #f3f4f6;">
-    <p style="margin:0 0 6px; font-size:14px; font-weight:800; color:#191f28;">Q. 유동 IP 숨기기랑 ㅇㅇ 고닉 숨기기 차이가 뭔가요?</p>
-    <p style="margin:0; font-size:13px; color:#4e5968;">유동 IP = 갤로그 없이 IP가 노출되는 유저 (ㅇㅇ 123.456)<br>ㅇㅇ 고닉 = 갤로그는 있지만 닉네임이 'ㅇㅇ'인 반고정닉 유저<br>두 필터는 <b>완전히 독립</b>으로 동작합니다.</p>
-  </div>
-  <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid #f3f4f6;">
-    <p style="margin:0 0 6px; font-size:14px; font-weight:800; color:#191f28;">Q. 설정 바꾸면 새로고침해야 하나요?</p>
-    <p style="margin:0; font-size:13px; color:#4e5968;">❌ 아니요. 토글 변경 즉시 페이지에 반영됩니다. 혹시 잘 안되는 경우 새로고침 해주세요.</p>
-  </div>
-  <div style="margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid #f3f4f6;">
-    <p style="margin:0 0 6px; font-size:14px; font-weight:800; color:#191f28;">Q. 다른 갤러리에서도 작동하나요?</p>
-    <p style="margin:0; font-size:13px; color:#4e5968;">현재 <b>특이점이 온다 마이너 갤러리 전용</b>입니다. 추후 (아마도) 다른 갤러리 지원 예정.</p>
-  </div>
-  <div>
-    <p style="margin:0 0 6px; font-size:14px; font-weight:800; color:#191f28;">Q. 오픈소스인가요?</p>
-    <p style="margin:0; font-size:13px; color:#4e5968;">✅ 네! MIT 라이선스로 <a href="https://github.com/AGI-Deep/SingulEYE" target="_blank" style="color:#3182f6; font-weight:700; text-decoration:none;">GitHub</a>에 전체 소스가 공개되어 있습니다.</p>
-  </div>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#fff; border:1px solid #eee; margin-bottom:20px;">
+<tr>
+<td style="padding:20px; font-size:13px; color:#555; line-height:1.8;">
+
+  <b style="color:#333;">Q. 개인정보 수집하나요?</b><br>
+  ❌ 아니요. 모든 데이터는 브라우저 내부(chrome.storage)에만 저장됩니다. 외부 서버 통신이 전혀 없습니다.<br><br>
+
+  <hr style="border:none; height:1px; background-color:#f0f0f0; margin:12px 0;">
+
+  <b style="color:#333;">Q. 유동 IP 숨기기랑 ㅇㅇ 고닉 숨기기 차이가 뭔가요?</b><br>
+  유동 IP = 갤로그 없이 IP가 노출되는 유저 (ㅇㅇ 123.456)<br>
+  ㅇㅇ 고닉 = 갤로그는 있지만 닉네임이 'ㅇㅇ'인 반고정닉 유저<br>
+  두 필터는 <b>완전히 독립</b>으로 동작합니다.<br><br>
+
+  <hr style="border:none; height:1px; background-color:#f0f0f0; margin:12px 0;">
+
+  <b style="color:#333;">Q. 설정 바꾸면 새로고침해야 하나요?</b><br>
+  ❌ 아니요. 토글 변경 즉시 페이지에 반영됩니다. 혹시 잘 안되는 경우 새로고침 해주세요.<br><br>
+
+  <hr style="border:none; height:1px; background-color:#f0f0f0; margin:12px 0;">
+
+  <b style="color:#333;">Q. 다른 갤러리에서도 작동하나요?</b><br>
+  현재 <b>특이점이 온다 마이너 갤러리 전용</b>입니다. 추후 (아마도) 다른 갤러리 지원 예정.<br><br>
+
+  <hr style="border:none; height:1px; background-color:#f0f0f0; margin:12px 0;">
+
+  <b style="color:#333;">Q. 오픈소스인가요?</b><br>
+  ✅ 네! MIT 라이선스로 <a href="https://github.com/AGI-Deep/SingulEYE" target="_blank" style="color:#3b82f6; font-weight:700; text-decoration:none;">GitHub</a>에 전체 소스가 공개되어 있습니다.
+
+</td>
+</tr>
+</table>
 
 <!-- ===== 푸터 ===== -->
-<div style="text-align:center; padding:32px 20px; background:linear-gradient(135deg,#1e293b,#334155); border-radius:16px; margin-bottom:8px;">
-  <p style="margin:0 0 8px; font-size:20px; font-weight:900; color:#fff;">SingulEYE (특안)</p>
-  <p style="margin:0 0 16px; font-size:13px; color:rgba(255,255,255,0.6);">특이점이 온다 갤러리를 더 깨끗하게</p>
-  <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-    <a href="https://github.com/AGI-Deep/SingulEYE" target="_blank" style="display:inline-block; padding:10px 20px; background:rgba(255,255,255,0.1); color:#fff; font-size:13px; font-weight:700; text-decoration:none; border-radius:10px; border:1px solid rgba(255,255,255,0.15);">📂 GitHub</a>
-    <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="display:inline-block; padding:10px 20px; background:#3182f6; color:#fff; font-size:13px; font-weight:700; text-decoration:none; border-radius:10px;">⬇️ 다운로드</a>
-    <a href="https://github.com/AGI-Deep/SingulEYE/issues" target="_blank" style="display:inline-block; padding:10px 20px; background:rgba(255,255,255,0.1); color:#fff; font-size:13px; font-weight:700; text-decoration:none; border-radius:10px; border:1px solid rgba(255,255,255,0.15);">🐛 버그 제보</a>
-  </div>
-</div>
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#1e293b; margin-bottom:8px;">
+<tr>
+<td style="text-align:center; padding:28px 20px;">
+  <b style="font-size:18px; color:#fff;">SingulEYE (특안)</b><br>
+  <span style="font-size:12px; color:#888;">특이점이 온다 갤러리를 더 깨끗하게</span><br><br>
+  <a href="https://github.com/AGI-Deep/SingulEYE" target="_blank" style="display:inline-block; padding:8px 16px; background-color:#334155; color:#fff; font-size:12px; font-weight:700; text-decoration:none; border:1px solid #475569;">📂 GitHub</a>
+  &nbsp;
+  <a href="https://github.com/AGI-Deep/SingulEYE/releases/latest" target="_blank" style="display:inline-block; padding:8px 16px; background-color:#3b82f6; color:#fff; font-size:12px; font-weight:700; text-decoration:none;">⬇️ 다운로드</a>
+  &nbsp;
+  <a href="https://github.com/AGI-Deep/SingulEYE/issues" target="_blank" style="display:inline-block; padding:8px 16px; background-color:#334155; color:#fff; font-size:12px; font-weight:700; text-decoration:none; border:1px solid #475569;">🐛 버그 제보</a>
+</td>
+</tr>
+</table>
 
-<p style="text-align:center; font-size:11px; color:#8b95a1; margin-top:12px;">© 2026 DeepAGI · Made with Claude Opus 4.6</p>
+<p style="text-align:center; font-size:11px; color:#999; margin-top:8px;">© 2026 DeepAGI · Made with Claude Opus 4.6</p>
 
 </div>
 <!-- ===== 여기까지 복사 ===== -->

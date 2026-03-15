@@ -19,10 +19,6 @@
 
 <br />
 
-<img src="screenshots/header.png" alt="SingulEYE Header" width="400" />
-
-<br />
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=&fontSize=0" width="100%" />
 
 </div>
@@ -32,64 +28,62 @@
 ## ✨ 주요 기능
 
 <div align="center">
-<table>
-<tr>
-<td align="center"><img src="screenshots/filter-writer.png" width="280" alt="작성자 필터" /></td>
-<td align="center"><img src="screenshots/filter-spam.png" width="280" alt="스팸 필터" /></td>
-</tr>
-<tr>
-<td align="center"><img src="screenshots/filter-visited.png" width="280" alt="읽은 글 표시" /></td>
-<td align="center"><img src="screenshots/filter-tabs.png" width="280" alt="탭 차단" /></td>
-</tr>
-</table>
-</div>
-
-<table>
-<tr>
-<td width="50%">
 
 ### 👤 작성자 필터
+<img src="screenshots/filter-writer.png" width="360" alt="작성자 필터" />
+
+</div>
+
 | 기능 | 설명 |
 |:---|:---|
 | **유동 IP 글 보기** | 유동 IP 작성 글 ON/OFF |
 | **유동 IP 댓글 보기** | 유동 IP 댓글 ON/OFF |
 | **ㅇㅇ 고닉 글 보기** | ㅇㅇ 반고닉 글 ON/OFF |
 
-</td>
-<td width="50%">
+<br />
+
+<div align="center">
 
 ### 🛡️ 스팸 필터
+<img src="screenshots/filter-spam.png" width="360" alt="스팸 필터" />
+
+</div>
+
 | 기능 | 설명 |
 |:---|:---|
 | **중복제목 제거** | 동일 제목 → 첫 글만 유지 |
 | **유사제목 제거** | 숫자만 다른 제목도 감지 |
 | **공지/설문 보호** | 공지/설문은 필터 무시 |
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+<br />
+
+<div align="center">
 
 ### ✅ 읽은 글 표시
+<img src="screenshots/filter-visited.png" width="360" alt="읽은 글 표시" />
+
+</div>
+
 | 기능 | 설명 |
 |:---|:---|
 | **체크 마크** | 이미 본 글 제목 앞에 ✓ 표시 |
 | **최대 5,000건** | 자동 관리되는 방문 기록 |
 | **기록 초기화** | 원클릭 방문 기록 삭제 |
 
-</td>
-<td width="50%">
+<br />
+
+<div align="center">
 
 ### 🏷️ 말머리(탭) 차단
+<img src="screenshots/filter-tabs.png" width="360" alt="탭 차단" />
+
+</div>
+
 | 기능 | 설명 |
 |:---|:---|
 | **개별 ON/OFF** | 말머리별 차단 토글 |
 | **전체 ON/OFF** | 원클릭 전체 제어 |
 | **기본값 복원** | 초기 상태로 되돌리기 |
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -138,26 +132,20 @@ SingulEYE/
 
 ## 🚀 설치 방법
 
-### 방법 1: 소스에서 직접 설치 (개발자 모드)
+### 방법 1: ZIP 다운로드 (추천)
+
+1. [**Releases 페이지**](https://github.com/AGI-Deep/SingulEYE/releases/latest)에서 **SingulEYE-v1.0.zip** 다운로드
+2. 압축 해제
+3. 크롬 주소창에 `chrome://extensions/` 입력
+4. 우측 상단 **개발자 모드** ON
+5. **"압축해제된 확장 프로그램을 로드합니다"** 클릭 → 폴더 선택
+
+### 방법 2: 소스에서 직접 설치
 
 ```bash
-# 1. 레포 클론
 git clone https://github.com/AGI-Deep/SingulEYE.git
-
-# 2. 크롬 확장 관리 페이지 열기
-#    주소창에 입력: chrome://extensions/
-
-# 3. 우측 상단 '개발자 모드' ON
-
-# 4. '압축해제된 확장 프로그램을 로드합니다' 클릭
-
-# 5. 클론한 SingulEYE 폴더 선택
+# 이후 위 3~5번 동일하게 진행
 ```
-
-### 방법 2: ZIP 다운로드
-
-1. 이 레포의 **Code → Download ZIP** 클릭
-2. 압축 해제 후 위 3~5번 동일하게 진행
 
 ---
 
