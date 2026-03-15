@@ -18,6 +18,13 @@
   const emptyState = document.querySelector("#emptyState");
   const hiddenCountValue = document.querySelector("#hiddenCountValue");
   const blockedHeadCountValue = document.querySelector("#blockedHeadCountValue");
+  const ooNickToggle = document.querySelector("#ooNickToggle");
+  const duplicateExactToggle = document.querySelector("#duplicateExactToggle");
+  const duplicateLooseToggle = document.querySelector("#duplicateLooseToggle");
+  const preserveNoticeToggle = document.querySelector("#preserveNoticeToggle");
+  const visitedMarksToggle = document.querySelector("#visitedMarksToggle");
+  const visitedCountLabel = document.querySelector("#visitedCountLabel");
+  const clearVisitedButton = document.querySelector("#clearVisitedButton");
   const blockAllButton = document.querySelector("#blockAllButton");
   const unblockAllButton = document.querySelector("#unblockAllButton");
   const resetHeadsButton = document.querySelector("#resetHeadsButton");
@@ -189,10 +196,55 @@
   function renderFloatingIpToggles() {
     floatingIpToggle.checked = settings.showFloatingIpPosts;
     floatingIpCommentToggle.checked = settings.showFloatingIpComments;
+    ooNickToggle.checked = settings.showOoNickPosts;
+  }
+
+  function renderSpamFilterToggles() {
+    duplicateExactToggle.checked = settings.hideDuplicateExact;
+    duplicateLooseToggle.checked = settings.hideDuplicateLoose;
+    preserveNoticeToggle.checked = settings.preserveNotice;
+  }
+
+  function renderVisitedControls() {
+    visitedMarksToggle.checked = settings.showVisitedMarks;
+    const count = liveContext?.visitedCount ?? 0;
+    visitedCountLabel.textContent = `기록 ${count.toLocaleString()}개`;
+    clearVisitedButton.disabled = count === 0;
+  }
+
+  async function loadVisitedCount() {
+    if (activeTab?.id) {
+      try {
+        const response = await chrome.tabs.sendMessage(activeTab.id, {
+          type: "GET_VISITED_COUNT"
+        });
+
+        if (liveContext) {
+          liveContext.visitedCount = response?.count ?? 0;
+        }
+      } catch (error) {
+        // Fall back to storage
+      }
+    }
+
+    if (!liveContext?.visitedCount) {
+      const result = await chrome.storage.local.get("singulEyeVisited");
+      const data = result.singulEyeVisited;
+      const count = Array.isArray(data) ? data.length : 0;
+
+      if (liveContext) {
+        liveContext.visitedCount = count;
+      } else {
+        visitedCountLabel.textContent = `기록 ${count.toLocaleString()}개`;
+        clearVisitedButton.disabled = count === 0;
+      }
+    }
   }
 
   function renderAll() {
     renderFloatingIpToggles();
+    renderSpamFilterToggles();
+    renderVisitedControls();
     renderMetrics();
     renderHeads();
     renderActionAvailability();
@@ -273,6 +325,8 @@
     activeTab = await getActiveTab();
     await getStoredSettings();
     await refreshLiveContext({ mode: "initial" });
+    await loadVisitedCount();
+    renderVisitedControls();
   }
 
   floatingIpToggle.addEventListener("change", async (event) => {
@@ -295,6 +349,82 @@
 
     setStatus(`유동 IP 댓글 보기를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
     renderAll();
+  });
+
+  ooNickToggle.addEventListener("change", async (event) => {
+    await saveSettings({
+      ...settings,
+      showOoNickPosts: event.target.checked
+    });
+    await refreshLiveContext({ mode: "silent" });
+
+    setStatus(`ㅇㅇ 고닉 글 보기를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
+    renderAll();
+  });
+
+  duplicateExactToggle.addEventListener("change", async (event) => {
+    await saveSettings({
+      ...settings,
+      hideDuplicateExact: event.target.checked
+    });
+    await refreshLiveContext({ mode: "silent" });
+
+    setStatus(`중복제목 제거를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
+    renderAll();
+  });
+
+  duplicateLooseToggle.addEventListener("change", async (event) => {
+    await saveSettings({
+      ...settings,
+      hideDuplicateLoose: event.target.checked
+    });
+    await refreshLiveContext({ mode: "silent" });
+
+    setStatus(`유사제목 제거를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
+    renderAll();
+  });
+
+  preserveNoticeToggle.addEventListener("change", async (event) => {
+    await saveSettings({
+      ...settings,
+      preserveNotice: event.target.checked
+    });
+    await refreshLiveContext({ mode: "silent" });
+
+    setStatus(`공지/설문 보호를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
+    renderAll();
+  });
+
+  visitedMarksToggle.addEventListener("change", async (event) => {
+    await saveSettings({
+      ...settings,
+      showVisitedMarks: event.target.checked
+    });
+    await refreshLiveContext({ mode: "silent" });
+
+    setStatus(`읽은 글 표시를 ${event.target.checked ? "ON" : "OFF"}으로 적용했습니다.`);
+    renderAll();
+  });
+
+  clearVisitedButton.addEventListener("click", async () => {
+    if (activeTab?.id) {
+      try {
+        await chrome.tabs.sendMessage(activeTab.id, {
+          type: "CLEAR_VISITED"
+        });
+      } catch (error) {
+        // Fall back to direct storage clear
+      }
+    }
+
+    await chrome.storage.local.remove("singulEyeVisited");
+
+    if (liveContext) {
+      liveContext.visitedCount = 0;
+    }
+
+    setStatus("읽은 글 기록을 모두 초기화했습니다.");
+    renderVisitedControls();
   });
 
   blockAllButton.addEventListener("click", async () => {

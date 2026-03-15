@@ -3,6 +3,9 @@ const SingulEyeShared = (() => {
   const SETTINGS_KEY = "singulEyeSettings";
   const LEGACY_SETTINGS_KEY = "singulShieldSettings";
   const DEFAULT_BLOCKED_HEAD_ID = "130";
+  const VISITED_KEY = "singulEyeVisited";
+  const VISITED_MAX = 5000;
+  const OO_NICK_PATTERN = /^ㅇㅇ(?:[\s._-]*\d+(?:[\s._-]?\d+)*)?$/u;
 
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -47,6 +50,11 @@ const SingulEyeShared = (() => {
       },
       showFloatingIpPosts: true,
       showFloatingIpComments: true,
+      showOoNickPosts: true,
+      hideDuplicateExact: false,
+      hideDuplicateLoose: false,
+      preserveNotice: true,
+      showVisitedMarks: true,
       availableHeads: []
     };
   }
@@ -112,6 +120,26 @@ const SingulEyeShared = (() => {
         typeof rawSettings.showFloatingIpComments === "boolean"
           ? rawSettings.showFloatingIpComments
           : defaultSettings.showFloatingIpComments,
+      showOoNickPosts:
+        typeof rawSettings.showOoNickPosts === "boolean"
+          ? rawSettings.showOoNickPosts
+          : defaultSettings.showOoNickPosts,
+      hideDuplicateExact:
+        typeof rawSettings.hideDuplicateExact === "boolean"
+          ? rawSettings.hideDuplicateExact
+          : defaultSettings.hideDuplicateExact,
+      hideDuplicateLoose:
+        typeof rawSettings.hideDuplicateLoose === "boolean"
+          ? rawSettings.hideDuplicateLoose
+          : defaultSettings.hideDuplicateLoose,
+      preserveNotice:
+        typeof rawSettings.preserveNotice === "boolean"
+          ? rawSettings.preserveNotice
+          : defaultSettings.preserveNotice,
+      showVisitedMarks:
+        typeof rawSettings.showVisitedMarks === "boolean"
+          ? rawSettings.showVisitedMarks
+          : defaultSettings.showVisitedMarks,
       availableHeads: normalizeHeads(rawSettings.availableHeads)
     };
   }
@@ -143,6 +171,9 @@ const SingulEyeShared = (() => {
     SETTINGS_KEY,
     LEGACY_SETTINGS_KEY,
     DEFAULT_BLOCKED_HEAD_ID,
+    VISITED_KEY,
+    VISITED_MAX,
+    OO_NICK_PATTERN,
     createDefaultSettings,
     mergeAvailableHeads,
     normalizeHeadId,

@@ -50,7 +50,7 @@
           </div>
           <div>
             <h2>작성자 필터</h2>
-            <p>유동 IP 글과 댓글을 각각 바로 제어합니다</p>
+            <p>유동 IP·ㅇㅇ 고닉 글과 댓글을 각각 제어합니다</p>
           </div>
         </div>
 
@@ -71,9 +71,88 @@
           <input class="toggle-input" id="floatingIpCommentToggle" type="checkbox">
           <span aria-hidden="true" class="toggle-ui"></span>
         </label>
+
+        <label class="setting-row" for="ooNickToggle">
+          <div class="copy-block">
+            <strong>ㅇㅇ 고닉 글 보기</strong>
+            <span>OFF로 바꾸면 ㅇㅇ 반고닉 글이 목록에서 숨겨집니다</span>
+          </div>
+          <input class="toggle-input" id="ooNickToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+      </section>
+
+      <section class="panel fade-in" style="animation-delay:.09s">
+        <div class="section-heading">
+          <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>읽은 글 표시</h2>
+            <p>한번 본 글 앞에 ✓ 표시를 달아 구분합니다</p>
+          </div>
+        </div>
+
+        <label class="setting-row" for="visitedMarksToggle">
+          <div class="copy-block">
+            <strong>읽은 글 체크 표시</strong>
+            <span>ON이면 이미 본 글 제목 앞에 ✓ 가 표시됩니다</span>
+          </div>
+          <input class="toggle-input" id="visitedMarksToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+
+        <div class="visited-footer">
+          <span class="visited-count" id="visitedCountLabel">기록 0개</span>
+          <button class="action-button action-button--danger" id="clearVisitedButton" type="button">기록 초기화</button>
+        </div>
       </section>
 
       <section class="panel fade-in" style="animation-delay:.12s">
+        <div class="section-heading">
+          <div class="section-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>스팸 필터</h2>
+            <p>중복·유사 제목 자동 제거 및 공지 보호</p>
+          </div>
+        </div>
+
+        <label class="setting-row" for="duplicateExactToggle">
+          <div class="copy-block">
+            <strong>중복제목 제거</strong>
+            <span>똑같은 제목의 글이 여러 개면 첫 번째만 남깁니다</span>
+          </div>
+          <input class="toggle-input" id="duplicateExactToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+
+        <label class="setting-row" for="duplicateLooseToggle">
+          <div class="copy-block">
+            <strong>유사제목 제거</strong>
+            <span>숫자만 다른 비슷한 제목도 첫 번째만 남깁니다</span>
+          </div>
+          <input class="toggle-input" id="duplicateLooseToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+
+        <label class="setting-row" for="preserveNoticeToggle">
+          <div class="copy-block">
+            <strong>공지/설문 보호</strong>
+            <span>ON이면 공지·설문 글은 어떤 필터에도 숨기지 않습니다</span>
+          </div>
+          <input class="toggle-input" id="preserveNoticeToggle" type="checkbox">
+          <span aria-hidden="true" class="toggle-ui"></span>
+        </label>
+      </section>
+
+      <section class="panel fade-in" style="animation-delay:.18s">
         <div class="section-heading">
           <div class="section-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -105,7 +184,7 @@
         </div>
       </section>
 
-      <footer class="app-footer fade-in" style="animation-delay:.18s">
+      <footer class="app-footer fade-in" style="animation-delay:.24s">
         DCInside 특이점이 온다 갤러리 전용
       </footer>
     </main>
