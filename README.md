@@ -19,6 +19,10 @@
 
 <br />
 
+<img src="screenshots/header.png" alt="SingulEYE Header" width="400" />
+
+<br />
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=&fontSize=0" width="100%" />
 
 </div>
@@ -26,6 +30,19 @@
 ---
 
 ## ✨ 주요 기능
+
+<div align="center">
+<table>
+<tr>
+<td align="center"><img src="screenshots/filter-writer.png" width="280" alt="작성자 필터" /></td>
+<td align="center"><img src="screenshots/filter-spam.png" width="280" alt="스팸 필터" /></td>
+</tr>
+<tr>
+<td align="center"><img src="screenshots/filter-visited.png" width="280" alt="읽은 글 표시" /></td>
+<td align="center"><img src="screenshots/filter-tabs.png" width="280" alt="탭 차단" /></td>
+</tr>
+</table>
+</div>
 
 <table>
 <tr>
